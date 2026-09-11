@@ -13,7 +13,7 @@ app.post('/book', async (req, res) => {
         res.status(500).send(error.message);
     }
 });
-// Fetch all bookings
+// Fetch bookings
 app.get('/bookings',async (req, res) => {
     try {
         const bookings = await Booking.find();
