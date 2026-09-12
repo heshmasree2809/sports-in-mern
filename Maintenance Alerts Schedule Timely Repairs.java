@@ -7,10 +7,7 @@ app.post('/maintenance-alert', async (req, res) => {
             return res.status(400).send('Facility and issue are required.');
         }
         const maintenance = new Maintenance({
-            facility,
-            issue,
-            alertDate: new Date(),
-            resolved: false,
+            facility,issue,alertDate: new Date(),resolved: false,
         });
         await maintenance.save();
         res.status(200).json({ message: 'Maintenance alert created', maintenance });
