@@ -11,7 +11,8 @@ app.post('/book', async (req, res) => {
         const booking = new Booking({ facility, user, date, timeSlot });
         await booking.save();
         res.status(200).send('Booking successful');
-    } catch (error) 
+    } 
+    catch (error) 
     {
         res.status(500).send(error.message);
     }
