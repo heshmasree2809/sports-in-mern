@@ -4,7 +4,8 @@ app.post('/book', async (req, res) => {
         const 
         {  facility, user, date, timeSlot } = req.body;
         // Validate input
-        if (!facility || !user || !date || !timeSlot) {
+        if (!facility || !user || !date || !timeSlot) 
+        {
             return res.status(400).send('All booking details are required.');
         }
         const booking = new Booking({ facility, user, date, timeSlot });
