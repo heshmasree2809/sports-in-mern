@@ -21,7 +21,7 @@ app.post('/book', async (req, res) => {
 app.get('/bookings',async (req, res) => {
     try 
     {
-        const bookings = await Booking.find();
+        const bookings=await Booking.find();
         res.status(200).json(bookings);
     } catch (error) 
     {
