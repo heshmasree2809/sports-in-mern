@@ -2,7 +2,7 @@
 app.post('/maintenance-alert', async (req, res) => {
     try 
         {
-        const { facility, issue } = req.body;
+        const { facility, issue }=req.body;
         // Validate input
         if (!facility || !issue) 
         {
