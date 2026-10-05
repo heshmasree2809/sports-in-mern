@@ -1,6 +1,7 @@
 // Booking a facility
 app.post('/book', async (req, res) => {
-    try {
+    try 
+    {
         const 
         {  facility, user, date, timeSlot } = req.body;
         if (!facility || !user || !date || !timeSlot) 
@@ -16,6 +17,7 @@ app.post('/book', async (req, res) => {
         res.status(500).send(error.message);
     }
 });
+
 app.get('/bookings',async (req, res) => {
     try 
     {
