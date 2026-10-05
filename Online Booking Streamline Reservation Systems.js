@@ -8,6 +8,7 @@ app.post('/book', async (req, res) => {
         {
             return res.status(400).send('All booking details are required.');
         }
+        
         const booking = new Booking({ facility, user, date, timeSlot });
         await booking.save();
         res.status(200).send('Booking successful');
